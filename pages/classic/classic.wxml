@@ -1,0 +1,3 @@
+<j-like like="{{classic.like_status}}" count="{{classic.fav_nums}}" />
+<j-movie image="{{classic.image}}" content="{{classic.content}}" />
+                
