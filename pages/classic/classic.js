@@ -9,7 +9,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    classic: null
+    classic: null,
+    first: false,
+    latest: true
   },
 
   /**
@@ -26,6 +28,14 @@ Page({
   onLike:function(event) {
     likeModel.like(event.detail.behavior,this.data.classic.id,this.data.classic.type)
     },
+
+  onNext: function(event) {
+
+  },
+
+  onPrevious: function(event) {
+
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

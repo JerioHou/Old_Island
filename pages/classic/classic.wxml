@@ -1,3 +1,11 @@
-<j-like bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}" />
-<j-movie image="{{classic.image}}" content="{{classic.content}}" />
-                
+<view class="container">
+  <view class='header'>
+    <j-episode class="epsoide" index="{{classic.index}}" />
+    <view class='like-container'>
+      <j-like bind:like="onLike" like="{{classic.like_status}}" count="{{classic.fav_nums}}" />
+    </view>
+  </view>
+  <j-movie image="{{classic.image}}" content="{{classic.content}}" />
+  <j-navi bind:left="onNext" bind:right="onPrevious" title="{{classic.title}}" first="{{first}}" latest="{{latest}}" class="navi" />
+
+</view>
