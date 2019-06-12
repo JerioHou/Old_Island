@@ -1,11 +1,13 @@
-// components/movie/index.js
+import { classic_beh } from '../classic-beh.js'
+
 Component({
+
+  behaviors: [classic_beh],
   /**
    * 组件的属性列表
    */
   properties: {
-    image: String,
-    content: String
+
   },
 
   /**

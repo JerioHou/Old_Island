@@ -30,11 +30,22 @@ Page({
     },
 
   onNext: function(event) {
-
+   this._updateClassic('next')
   },
 
   onPrevious: function(event) {
+    this._updateClassic('previous')
+  },
 
+  _updateClassic:function(nextOrPrevious){
+    let index = this.data.classic.index
+    classicModel.getClassic(index, nextOrPrevious, (res) =>{
+      this.setData({
+        classic: res,
+        first: classicModel.isFirst(res.index),
+        latest: classicModel.isLatest(res.index)
+      })
+    })
   },
 
   /**
